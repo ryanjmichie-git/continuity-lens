@@ -1,0 +1,42 @@
+{
+  "auprc": {
+    "cheap": 0.9747077457223522,
+    "encoder": 0.7590230974209452,
+    "hybrid": 0.968710717327236,
+    "predictor": 0.7775665467988722
+  },
+  "auroc": {
+    "cheap": 0.9504938271604939,
+    "encoder": 0.6451234567901235,
+    "hybrid": 0.9331481481481483,
+    "predictor": 0.6741975308641975
+  },
+  "balanced_accuracy": 0.8333333333333333,
+  "bootstrap": {
+    "delta_hybrid_minus_cheap": {
+      "high": -0.0002246960139340979,
+      "low": -0.01216873792462557,
+      "median": -0.0057864327933411785
+    },
+    "delta_predictor_minus_cheap": {
+      "high": -0.14335578872703433,
+      "low": -0.22936933143669203,
+      "median": -0.19211829375249811
+    },
+    "resamples": 5000
+  },
+  "groups": 30,
+  "hybrid_threshold": 0.3509625224665186,
+  "mean_latency_ms": {
+    "cheap": 17.18357518936197,
+    "model": 136.26974555146364
+  },
+  "peak_vram_mb": 1279.5341796875,
+  "prevalence": 0.6666666666666666,
+  "recall_by_corruption": {
+    "block_reorder": 0.9222222222222223,
+    "temporal_skip": 0.8333333333333334
+  },
+  "reporting_outcome": "cheap_signals_outperform",
+  "rows": 270
+}

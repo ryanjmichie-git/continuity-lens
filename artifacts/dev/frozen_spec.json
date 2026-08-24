@@ -1,0 +1,112 @@
+{
+  "anchors_per_source": 3,
+  "candidate_horizons": [
+    2,
+    4,
+    8
+  ],
+  "cheap_calibrator": {
+    "coefficients": [
+      0.2656732377288396,
+      -0.11338766281989124,
+      3.8039358892510036
+    ],
+    "feature_names": [
+      "histogram_distance",
+      "ssim_distance",
+      "flow_discontinuity"
+    ],
+    "intercept": 1.2791418303961377,
+    "mean": [
+      0.11268218159390314,
+      0.5253307546090973,
+      0.8539763141775238
+    ],
+    "scale": [
+      0.05703186489600267,
+      0.24151110171276102,
+      1.0280508777793513
+    ]
+  },
+  "cheap_feature_names": [
+    "histogram_distance",
+    "ssim_distance",
+    "flow_discontinuity"
+  ],
+  "data_manifest_hash": "0543e897653244c9be77fc75a0d3ad4996a13e6753d8e7dc5d0f792aa6a5568a",
+  "expected_test_groups": 30,
+  "expected_test_rows": 360,
+  "frozen_at_utc": "2026-08-24T00:15:46.802614+00:00",
+  "held_out_policy": "one pass; no overwrite; full protocol version required after a bug fix",
+  "horizon_development_auprc": {
+    "2": 0.7760139853439004,
+    "4": 0.726472576597256,
+    "8": 0.7593401034084062
+  },
+  "hybrid_calibrator": {
+    "coefficients": [
+      0.021724800097063665,
+      -0.11453031763926455,
+      3.685942947322103,
+      0.6320967230356387
+    ],
+    "feature_names": [
+      "histogram_distance",
+      "ssim_distance",
+      "flow_discontinuity",
+      "prediction_error"
+    ],
+    "intercept": 1.2101815179913955,
+    "mean": [
+      0.11268218159390314,
+      0.5253307546090973,
+      0.8539763141775238,
+      0.5749623862681565
+    ],
+    "scale": [
+      0.05703186489600267,
+      0.24151110171276102,
+      1.0280508777793513,
+      0.015692463760058725
+    ]
+  },
+  "hybrid_threshold": 0.3509625224665186,
+  "model_manifest": {
+    "checkpoint_bytes": 5127726842,
+    "checkpoint_sha256": "5346856ec9df69487fe72a25bf2632aaa8112df33fb67708e3f7374edc1f7012",
+    "checkpoint_url": "https://dl.fbaipublicfiles.com/vjepa2/vitl.pt",
+    "commit": "204698b45b3712590f06245fbfba32d3be539812",
+    "cuda": "12.8",
+    "device": "cuda",
+    "dtype": "torch.bfloat16",
+    "entrypoint": "vjepa2_vit_large",
+    "gpu": "NVIDIA GeForce RTX 5080",
+    "gpu_arches": [
+      "sm_70",
+      "sm_75",
+      "sm_80",
+      "sm_86",
+      "sm_90",
+      "sm_100",
+      "sm_120"
+    ],
+    "horizon": 2,
+    "model_load_ms": 6403.034700080752,
+    "python": "3.11.6",
+    "repository": "facebookresearch/vjepa2",
+    "torch": "2.10.0+cu128",
+    "total_frames": 16
+  },
+  "primary_corruptions": [
+    "continuous",
+    "temporal_skip",
+    "block_reorder"
+  ],
+  "protocol_hash": "24a0e6d55dc4e295c69a2e0377930b60d5257275ba3a88ce2574c07b344da16c",
+  "protocol_version": 1,
+  "secondary_corruption": "cross_video_splice",
+  "seed": 239,
+  "selected_horizon": 2,
+  "selection_tie_break": 4,
+  "source_tree_sha256": "a256b40ac9e7fd014c9dacb77a47e1c12f1acd058674fa8b220a2450a3115a71"
+}

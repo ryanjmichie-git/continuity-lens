@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-labelledby="title desc">
+  <title id="title">Continuity Lens system overview</title>
+  <desc id="desc">Video context predicts future latent tokens, which are compared with observed target tokens and inexpensive baselines.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#101827"/>
+      <stop offset="1" stop-color="#172554"/>
+    </linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="8" stdDeviation="10" flood-opacity=".25"/></filter>
+  </defs>
+  <rect width="1200" height="420" rx="28" fill="url(#bg)"/>
+  <text x="64" y="68" fill="#f8fafc" font-family="Inter,Segoe UI,sans-serif" font-size="34" font-weight="700">Continuity Lens</text>
+  <text x="64" y="102" fill="#94a3b8" font-family="Inter,Segoe UI,sans-serif" font-size="18">Does a learned future agree with what happened next?</text>
+  <g filter="url(#shadow)" font-family="Inter,Segoe UI,sans-serif">
+    <rect x="64" y="150" width="210" height="170" rx="18" fill="#1e293b" stroke="#475569"/>
+    <text x="88" y="184" fill="#cbd5e1" font-size="15" font-weight="600">CONTEXT CLIP</text>
+    <rect x="88" y="208" width="34" height="76" rx="5" fill="#334155"/><circle cx="105" cy="246" r="9" fill="#2dd4bf"/>
+    <rect x="132" y="208" width="34" height="76" rx="5" fill="#334155"/><circle cx="153" cy="246" r="9" fill="#2dd4bf"/>
+    <rect x="176" y="208" width="34" height="76" rx="5" fill="#334155"/><circle cx="201" cy="246" r="9" fill="#2dd4bf"/>
+    <rect x="220" y="208" width="30" height="76" rx="5" fill="#334155"/><circle cx="244" cy="246" r="9" fill="#2dd4bf"/>
+    <path d="M286 235h60" stroke="#5eead4" stroke-width="4"/><path d="m338 225 12 10-12 10" fill="none" stroke="#5eead4" stroke-width="4"/>
+    <rect x="360" y="150" width="210" height="170" rx="18" fill="#312e81" stroke="#818cf8"/>
+    <text x="384" y="184" fill="#c7d2fe" font-size="15" font-weight="600">V-JEPA PREDICTOR</text>
+    <g fill="#818cf8"><rect x="390" y="215" width="34" height="34" rx="7"/><rect x="434" y="215" width="34" height="34" rx="7"/><rect x="478" y="215" width="34" height="34" rx="7"/><rect x="412" y="259" width="34" height="34" rx="7"/><rect x="456" y="259" width="34" height="34" rx="7"/></g>
+    <path d="M582 235h60" stroke="#a5b4fc" stroke-width="4"/><path d="m634 225 12 10-12 10" fill="none" stroke="#a5b4fc" stroke-width="4"/>
+    <rect x="656" y="150" width="210" height="170" rx="18" fill="#1e293b" stroke="#475569"/>
+    <text x="680" y="184" fill="#cbd5e1" font-size="15" font-weight="600">OBSERVED TARGET</text>
+    <g fill="#f59e0b"><rect x="686" y="215" width="34" height="34" rx="7"/><rect x="730" y="215" width="34" height="34" rx="7"/><rect x="774" y="215" width="34" height="34" rx="7"/><rect x="708" y="259" width="34" height="34" rx="7"/><rect x="752" y="259" width="34" height="34" rx="7"/></g>
+    <path d="M878 235h60" stroke="#fbbf24" stroke-width="4"/><path d="m930 225 12 10-12 10" fill="none" stroke="#fbbf24" stroke-width="4"/>
+    <rect x="952" y="150" width="184" height="170" rx="18" fill="#134e4a" stroke="#2dd4bf"/>
+    <text x="976" y="184" fill="#99f6e4" font-size="15" font-weight="600">REVIEW SIGNALS</text>
+    <text x="976" y="225" fill="#f0fdfa" font-size="20" font-weight="700">Latent error</text>
+    <text x="976" y="258" fill="#ccfbf1" font-size="16">+ cheap baselines</text>
+    <text x="976" y="291" fill="#5eead4" font-size="14">with uncertainty</text>
+  </g>
+  <text x="64" y="375" fill="#64748b" font-family="Inter,Segoe UI,sans-serif" font-size="15">Research probe • benchmark-calibrated • human-in-the-loop</text>
+</svg>

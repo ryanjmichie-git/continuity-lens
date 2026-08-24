@@ -1,0 +1,28 @@
+{
+  "auprc": {
+    "cheap": 0.9514720232748339,
+    "encoder": 0.7615694869638434,
+    "hybrid": 0.9528550246583628,
+    "predictor": 0.7766477216987977
+  },
+  "auroc": {
+    "cheap": 0.9224074074074075,
+    "encoder": 0.6241820987654321,
+    "hybrid": 0.9204012345679011,
+    "predictor": 0.6550154320987653
+  },
+  "balanced_accuracy": 0.8611111111111112,
+  "groups": 60,
+  "hybrid_threshold": 0.3509625224665186,
+  "mean_latency_ms": {
+    "cheap": 17.462810919689083,
+    "model": 135.02144890544176
+  },
+  "peak_vram_mb": 1279.5341796875,
+  "prevalence": 0.6666666666666666,
+  "recall_by_corruption": {
+    "block_reorder": 0.8777777777777778,
+    "temporal_skip": 0.9
+  },
+  "rows": 540
+}

@@ -1,0 +1,30 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+*.py[cod]
+*.egg-info/
+
+# Large or private artifacts
+data/
+checkpoints/
+.cache/
+.private/
+artifacts/dev/predictions.csv
+artifacts/dev/model_manifest.json
+artifacts/dev/dev_cases.jsonl
+artifacts/test/test_cases.jsonl
+*.mp4
+*.mov
+*.avi
+*.pt
+*.pth
+*.safetensors
+
+# Local tooling
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
