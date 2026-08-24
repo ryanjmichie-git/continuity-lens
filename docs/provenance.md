@@ -14,17 +14,23 @@ bootstrap draws, metrics, and figures are committed as immutable result artifact
 
 ## Post-test changes
 
-After the held-out result existed, only product/demo surfaces under `src/continuity_lens/` changed:
+After the held-out result existed, only product, auxiliary-analysis, and demo surfaces changed:
 
-- `app.py`: exposes the no-go product decision above the experimental score and discovers local
-  generated examples.
-- `cli.py`: adds the `data demos` command.
+- `app.py`: separates the cheap and experimental hybrid scores, explains every signal, exposes the
+  exact boundary, and reports cold and warm latency without making an automated decision.
+- `cli.py`: adds generated-demo, diagnostic, and system-walkthrough commands.
 - `synthetic.py`: creates six H.264 qualitative demo pairs.
+- `diagnostics.py`: scores the controlled auxiliary suite and writes explicitly non-headline
+  summaries and a figure.
+- `walkthrough.py`: records real system outputs and latency for the six owned examples; it does not
+  claim human usability evidence.
+- `scripts/render_demo.py`: renders the deterministic captioned two-minute walkthrough from owned
+  repository artifacts.
 
 No feature definition, case generator, mask, model loader, calibrator, metric, bootstrap, or frozen
 test path changed. Tests and documentation were expanded, and no second held-out run was made.
 
 Because protocol v1 conservatively hashes the entire package rather than only scoring modules, the
-current package hash intentionally differs from the test-time hash. The freeze guard will refuse a
+current package hash intentionally differs from the test-time hash. The freeze guard refuses a
 new test run under the old protocol. Re-evaluation requires a new protocol version and a complete
 development freeze; deleting or overwriting the existing held-out artifacts is prohibited.

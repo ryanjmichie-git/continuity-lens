@@ -23,9 +23,11 @@ from continuity_lens.config import (
     default_data_dir,
 )
 from continuity_lens.dataset import prepare_davis
+from continuity_lens.diagnostics import run_synthetic_diagnostics
 from continuity_lens.evaluation import run_development, run_frozen_test
 from continuity_lens.synthetic import generate_demo_clips, generate_diagnostics
 from continuity_lens.vjepa import load_vjepa
+from continuity_lens.walkthrough import run_demo_walkthrough
 
 app = typer.Typer(no_args_is_help=True, help="Research video continuity with V-JEPA.")
 data_app = typer.Typer(no_args_is_help=True, help="Prepare licensed local datasets.")
@@ -162,6 +164,36 @@ def launch_app(
 ) -> None:
     """Launch the local two-clip continuity review experience."""
     create_app(artifacts_root=artifacts_root, mock_model=mock_model).launch(share=share)
+
+
+@app.command()
+def walkthrough(
+    data_root: Path = typer.Option(default_data_dir()),
+    artifacts_root: Path = typer.Option(default_artifacts_dir()),
+    mock_model: bool = typer.Option(False, help="Use the deterministic CI scorer."),
+) -> None:
+    """Measure all six generated examples; this is not human usability evidence."""
+    result = run_demo_walkthrough(
+        data_root=data_root,
+        artifacts_root=artifacts_root,
+        mock_model=mock_model,
+    )
+    typer.echo(json.dumps(result["summary"], indent=2))
+
+
+@app.command()
+def diagnostics(
+    data_root: Path = typer.Option(default_data_dir()),
+    artifacts_root: Path = typer.Option(default_artifacts_dir()),
+    mock_model: bool = typer.Option(False, help="Use the deterministic CI scorer."),
+) -> None:
+    """Score the controlled synthetic lane; never use it for headline claims."""
+    result = run_synthetic_diagnostics(
+        data_root=data_root,
+        artifacts_root=artifacts_root,
+        mock_model=mock_model,
+    )
+    typer.echo(json.dumps(result["summary"], indent=2))
 
 
 @app.command()

@@ -81,6 +81,10 @@ This is not evidence that world-model signals cannot help real generative-video 
 out of domain, the corruptions reward flow, the future-only mask differs from pretraining, and AUPRC
 reflects the constructed 2:1 prevalence.
 
+The post-benchmark [controlled diagnostic](diagnostic-report.md) was consistent with that caution:
+global prediction error moved directionally in only 5 of 9 simple anomaly comparisons and the frozen
+threshold detected none. It is reported as a stress-test failure, never as headline evaluation.
+
 ## Next experiment
 
 Create an owned, consented benchmark of creator-identified failures with severity labels,

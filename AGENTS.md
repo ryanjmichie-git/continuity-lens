@@ -10,9 +10,12 @@ Does masked-future latent prediction identify implausible video transitions bett
 - Environment: `uv run continuity-lens doctor`
 - Data: `uv run continuity-lens data prepare`
 - Generated demos: `uv run continuity-lens data demos`
+- Synthetic diagnostics: `uv run continuity-lens diagnostics`
+- Real-system walkthrough: `uv run continuity-lens walkthrough`
 - Development benchmark: `uv run continuity-lens benchmark --split dev`
 - Frozen test: `uv run continuity-lens benchmark --split test --frozen`
 - App: `uv run continuity-lens app`
+- Captioned walkthrough: `uv run python scripts/render_demo.py`
 - Quality gate: `uv run continuity-lens check`
 
 ## Non-negotiable evaluation contract

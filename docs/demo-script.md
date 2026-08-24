@@ -1,5 +1,9 @@
 # Two-minute walkthrough
 
+Status: a deterministic, silent, captioned H.264 render is available at
+[`docs/assets/continuity-lens-demo.mp4`](assets/continuity-lens-demo.mp4). Regenerate it with
+`uv run python scripts/render_demo.py`. The spoken script below is optional for a live interview.
+
 ## 0:00–0:20 — Frame the decision
 
 “Continuity Lens asks whether V-JEPA’s masked-future prediction error detects implausible video
@@ -9,9 +13,9 @@ world-model signal earns its product cost—not to force a win.”
 ## 0:20–0:50 — Show the workflow
 
 Launch `uv run continuity-lens app`, select a generated teleportation example, and run analysis.
-Point out the two clips, boundary strip, experimental hybrid risk, component scores, tubelet error,
-and measured latency. State that the risk is benchmark-calibrated triage evidence, not physical
-truth.
+Point out the two clips, boundary strip, cheap benchmark score, experimental hybrid score,
+component scores, tubelet error, and measured latency. State that both scores are
+benchmark-calibrated triage evidence, not physical truth or an automated production decision.
 
 ## 0:50–1:25 — Explain methodological safeguards
 

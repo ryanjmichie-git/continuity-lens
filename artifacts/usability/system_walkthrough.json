@@ -1,0 +1,19 @@
+{
+  "case_count": 6,
+  "evidence_level": "EMPIRICAL \u2014 system behavior; not human usability evidence",
+  "horizon": 2,
+  "hybrid_flags": 0,
+  "known_bad_cases": 4,
+  "known_good_cases": 2,
+  "limitations": [
+    "Generated geometry is a diagnostic lane, not natural-video evidence.",
+    "System timings are measured; human task times are not observed.",
+    "Archetype interpretations are hypotheses, not participant statements."
+  ],
+  "mean_cheap_features_ms": 17.42078325090309,
+  "mean_decode_ms": 14.424783332894245,
+  "mean_model_inference_ms": 187.16113331417242,
+  "mean_total_warm_ms": 252.3130498981724,
+  "model_load_ms": 7708.312899805605,
+  "model_mode": "V-JEPA 2 ViT-L"
+}

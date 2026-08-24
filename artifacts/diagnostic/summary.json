@@ -1,0 +1,55 @@
+{
+  "case_count": 12,
+  "cheap_risk_directional": {
+    "comparisons": 9,
+    "hits": 6
+  },
+  "claim_boundary": "These results reveal behavior on simple generated geometry only and cannot support claims about real or generative video.",
+  "condition_means": {
+    "continuous": {
+      "encoder_distance": 0.08313,
+      "flow_discontinuity": 0.0,
+      "histogram_distance": 0.0,
+      "prediction_error": 0.550833,
+      "ssim_distance": 0.030901
+    },
+    "object_disappearance": {
+      "encoder_distance": 0.077424,
+      "flow_discontinuity": 0.0,
+      "histogram_distance": 0.082987,
+      "prediction_error": 0.53208,
+      "ssim_distance": 0.021095
+    },
+    "teleportation": {
+      "encoder_distance": 0.09993,
+      "flow_discontinuity": 0.0,
+      "histogram_distance": 0.0,
+      "prediction_error": 0.557447,
+      "ssim_distance": 0.04219
+    },
+    "velocity_change": {
+      "encoder_distance": 0.107253,
+      "flow_discontinuity": 0.0,
+      "histogram_distance": 0.0,
+      "prediction_error": 0.555211,
+      "ssim_distance": 0.029145
+    }
+  },
+  "encoder_distance_directional": {
+    "comparisons": 9,
+    "hits": 6
+  },
+  "evidence_level": "EMPIRICAL \u2014 controlled synthetic diagnostic; not headline evidence",
+  "frozen_threshold_anomaly_recall": 0.0,
+  "frozen_threshold_false_alert_rate": 0.0,
+  "horizon": 2,
+  "hybrid_risk_directional": {
+    "comparisons": 9,
+    "hits": 5
+  },
+  "model_mode": "V-JEPA 2 ViT-L",
+  "prediction_error_directional": {
+    "comparisons": 9,
+    "hits": 5
+  }
+}

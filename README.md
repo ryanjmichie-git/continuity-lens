@@ -14,7 +14,7 @@ Continuity Lens is a research-to-product case study built around V-JEPA 2. It pr
 | Explicit V-JEPA source/checkpoint loader | Verified on RTX 5080 with the official 5.1 GB checkpoint |
 | DAVIS 60/30 grouped benchmark | Completed; media stays local and predictions are downloadable |
 | Frozen held-out result | Completed once under protocol `24a0e6d5`; cheap signals outperformed |
-| Problem interviews and usability evidence | Human sessions pending; no validation claim |
+| Discovery and usability | Archetype proxy and expert walkthrough only; no human-validation claim |
 
 The repository never ships invented user evidence or placeholder benchmark numbers.
 
@@ -88,15 +88,30 @@ as selectable examples and remain ignored by Git. You can also upload the contex
 clip separately. The app samples unique decoded frames, rejects undersized videos instead of
 repeating frames, and shows:
 
-- Benchmark-calibrated discontinuity risk, once a development calibration exists.
+- Cheap-only and experimental hybrid benchmark scores, once development calibration exists.
 - V-JEPA prediction error and encoder distance.
 - Histogram, SSIM, and optical-flow baselines.
-- An eight-frame boundary strip, target-tubelet error curve, and component latency.
+- A boundary strip with four context frames and the frozen target horizon, a target-tubelet error
+  curve, and measured decode, feature, model, and total latency.
 - Plain-language limitations next to the result.
 
 ![Continuity Lens local application with a generated example](docs/assets/app-result.png)
 
+[Watch the two-minute captioned walkthrough](docs/assets/continuity-lens-demo.mp4).
+
 Use `--mock-model` only to exercise the interface without the checkpoint.
+
+Reproduce the post-benchmark auxiliary evidence with:
+
+```powershell
+uv run continuity-lens walkthrough
+uv run continuity-lens diagnostics
+uv run python scripts/render_demo.py
+```
+
+The walkthrough records real system outputs for all six owned examples; it is not human-usability
+evidence. Diagnostics score twelve controlled geometry cases and remain outside the headline
+benchmark.
 
 ## Evaluation contract
 
@@ -109,7 +124,10 @@ Use `--mock-model` only to exercise the interface without the checkpoint.
 
 See the [case study](docs/case-study.md), [evaluation card](docs/evaluation-card.md),
 [benchmark provenance](docs/provenance.md), [product brief](docs/product-brief.md), and
-[prior-art matrix](docs/prior-art.md).
+[prior-art matrix](docs/prior-art.md). The [evidence register](docs/evidence-register.md) separates
+measured results from hypotheses and simulated review. The
+[synthetic diagnostic report](docs/diagnostic-report.md) documents an auxiliary stress-test failure
+without expanding the headline claim.
 
 ## Repository principles
 

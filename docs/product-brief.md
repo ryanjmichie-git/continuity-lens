@@ -10,8 +10,9 @@ Candidate job to be done:
 
 This is a hypothesis until the discovery gate in [discovery.md](discovery.md) is satisfied.
 
-Problem interviews are still pending, so the current positioning is a **research probe**, not a
-validated creator-QA product.
+Human problem interviews were not conducted. An explicitly hypothetical
+[archetype proxy](discovery.md) informs interface safeguards, so the current positioning remains a
+**research probe**, not a validated creator-QA product.
 
 ## Product wedge
 

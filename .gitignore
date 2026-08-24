@@ -22,6 +22,7 @@ artifacts/test/test_cases.jsonl
 *.pt
 *.pth
 *.safetensors
+!docs/assets/continuity-lens-demo.mp4
 
 # Local tooling
 .idea/
